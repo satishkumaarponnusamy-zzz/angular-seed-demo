@@ -19,3 +19,23 @@ Creates app structure for new angular app.
 ```bash
 npm install -g slush
 ```
+
+### Installation
+
+Clone this repository (since this npm package is not published) and install slush generator globally
+
+```bash
+npm install -g .
+```
+
+### Usage
+
+Create a new folder for your project:
+```bash
+mkdir my-angular-app
+```
+
+Run the slush generator from within the new folder:
+```bash
+cd my-angular-app && slush angular-seed-demo
+```
