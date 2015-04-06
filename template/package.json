@@ -1,0 +1,7 @@
+{
+    "name": "<%= angularAppName %>",
+    "description": "<%= description %>",
+    "version": "<%= version %>",
+    "private": true,
+    "devDependencies": {}
+}

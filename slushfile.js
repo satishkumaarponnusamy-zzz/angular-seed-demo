@@ -14,19 +14,19 @@ gulp.task("main", function (done) {
     name: "angularAppName",
     message: "What is the angular module name?",
     "default": function (answers) {
-      return _.camelize(answers.dashedName) + "App";
+      return _.camelize(path.basename(process.cwd())) + "App";
     }
   }, {
     name: "webAppTitle",
     message: "What is the name of the app?",
     "default": function (answers) {
-      return _.titleize(answers.dashedName);
+      return _.titleize(answers.angularAppName);
     }
   }, {
     name: 'controllerName',
     message: 'What is the initial controller name?',
     'default': function (answers) {
-      return _.classify(answers.dashedName) + "Controller";
+      return _.classify(answers.angularAppName) + "Controller";
     }
   }, {
     name: 'description',
