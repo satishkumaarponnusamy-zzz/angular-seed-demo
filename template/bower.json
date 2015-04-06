@@ -1,7 +1,7 @@
 {
 	"name": "<%= angularAppName %>",
-	"description": "<% description %>",
-	"version": "<% version %>",
+	"description": "<%= description %>",
+	"version": "<%= version %>",
 	"authors": [],
 	"private": true,
 	"ignore": [
