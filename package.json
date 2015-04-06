@@ -18,6 +18,11 @@
     "npm": ">=1.4.28"
   },
   "dependencies": {
-    "gulp": "~3.8.11"
+    "gulp": "~3.8.11",
+    "inquirer": "~0.8.2",
+    "underscore.string": "~3.0.3",
+    "gulp-template": "~3.0.0",
+    "gulp-rename": "~1.2.2",
+    "gulp-conflict": "~0.3.0"
   }
 }
