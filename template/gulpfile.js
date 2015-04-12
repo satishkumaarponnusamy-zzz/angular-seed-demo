@@ -72,5 +72,5 @@ gulp.task("watch-js", function () {
 });
 
 gulp.task("default", function () {
-  runInSequence("copyIndexHtml", "build-js", "connect", "watch-js");
+  runInSequence("bower", "copyIndexHtml", "build-js", "watch-js", "connect");
 });

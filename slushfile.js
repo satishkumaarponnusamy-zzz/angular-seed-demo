@@ -7,7 +7,8 @@ var gulp = require("gulp"),
   path = require("path"),
   template = require("gulp-template"),
   rename = require("gulp-rename"),
-  conflict = require("gulp-conflict");
+  conflict = require("gulp-conflict"),
+  install = require("gulp-install");
 
 gulp.task("main", function (done) {
   inquirer.prompt([{
@@ -55,6 +56,7 @@ gulp.task("main", function (done) {
       }))
       .pipe(conflict("./"))
       .pipe(gulp.dest("./"))
+      .pipe(install())
       .on("end", function () {
         console.log("Done");
       });
