@@ -8,9 +8,10 @@ var gulp = require("gulp"),
   template = require("gulp-template"),
   rename = require("gulp-rename"),
   conflict = require("gulp-conflict"),
-  install = require("gulp-install");
+  install = require("gulp-install"),
+  shell = require("gulp-shell");
 
-gulp.task("main", function (done) {
+gulp.task("main", ["install"], function (done) {
   inquirer.prompt([{
     name: "angularAppName",
     message: "What is the angular module name?",
@@ -63,5 +64,7 @@ gulp.task("main", function (done) {
     done();
   });
 });
+
+gulp.task("install", shell.task(["npm install -g bower", "npm install -g gulp"]));
 
 gulp.task("default", ["main"]);
