@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="<%= angularAppName %>">
+<head>
+  <meta charset="utf-8">
+  <title><%= webAppTitle %></title> 
+</head>
+<body>
+  <div class="container" ng-controller="<%= controllerName %>">
+    <div>
+      <h1 ng-cloak>{{ name }}!</h1>
+    </div>
+
+    <!-- @if NODE_ENV="debug" -->  
+    <div>
+        <h1>Local</h1>
+    </div>
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV="QA" -->  
+    <div>
+        <h1>QA</h1>
+    </div>
+    <!-- @endif -->
+    
+    <div class="footer">
+      <p><%= currentFullYear %></p>
+    </div>
+
+    <script type="text/javascript" src="vendor.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </div>
+</body>
+</html>
